@@ -41,6 +41,10 @@ def main():
 
 @app.route('/upload_file/', methods = ['POST'])
 def upload_file():
+    name = request.form['name']
+    address=request.form["address"]
+    contact=request.form["contact"]
+    pin=request.form["pin"]
     UPLOAD_FOLDER = './static/inputimages'
     ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
     app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER

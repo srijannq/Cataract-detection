@@ -19,7 +19,7 @@
 
 <body>
     <div class="container-fluid">
-        <nav class="navbar navbar-expand-md fixed-top main-navbar">
+        <nav class="navbar navbar-expand-md fixed-top main-navbar bg-dark">
             <button class="navbar-toggler" type="button" style="background-color: #2650a4;" data-toggle="collapse"
                 data-target="#Navbar">
                 <span class="fa fa-bars" style="color: white">
@@ -51,6 +51,19 @@
                     <div class="label-text ml-5">Upload Eye Image</div>
                     <input type="file" id="img" name='file'>
                     <br>
+                    <br>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    <br>
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" placeholder="Enter your address" required>
+                    <br>
+                    <label for="contact">Contact Info:</label>
+                    <input type="email" id="contact" name="contact" placeholder="Enter your email" required>
+                    <br>
+                    <label for="pin">Pin:</label>
+                    <input type="number" id="pin" name="pin" placeholder="Enter your pin" required>
+                    <br>
                     <input class="ml-5" id="submit" type="submit">
                 </form>
             </div>
@@ -60,11 +73,16 @@
                     <img class="input-image" src="./../static/inputimages/{{ user_image }}" alt="No file upload">
                     <br>
                     <form action="{{ url_for('prediction',file = user_image) }}" method="post">
-                        <input class="ml-5" id="submit" type="submit" value="Show Result">
+                        <input class="ml-5" id="submit" type="submit" value="Run test">
+                        <br>
+                        <br>
+                       
                     </form>
                 </div>
             </div>
         </div>
     </div>
+   
 
-    
+</body>
+</html>
