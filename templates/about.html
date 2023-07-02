@@ -1,0 +1,132 @@
+<html>
+<head>
+<!-- Add bootstrap CDN link -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet"  href="static/style.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Monda:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+
+  background-color: #f0f0f0;
+}
+
+.navbar {
+    font-family: 'Monda',sans-serif;
+  background-color: #333;
+  font-size: larger;
+}
+
+.navbar a {
+  color: white;
+}
+
+.navbar a:hover {
+  color: #2650a4;
+}
+
+.logo {
+  width: 100px;
+}
+
+.main {
+  height: calc(100vh - 60px);
+}
+
+.content {
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 48px;
+  color: #333;
+}
+
+.content p {
+  font-size: 18px;
+  color: #333;
+}
+
+.content img {
+  width: 300px;
+}
+</style>
+</head>
+<body>
+<!-- Use bootstrap navbar component -->
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-md fixed-top main-navbar bg-dark">
+        <button class="navbar-toggler" type="button" style="background-color: #2a71ff;" data-toggle="collapse"
+            data-target="#Navbar">
+            <span class="fa fa-bars" style="color: white">
+            </span>
+        </button>
+        <div class="center">
+            <a style="color: #2a71ff;"  class="navbar-brand mt-3 mr-5 ml-5 nav-style" href="{{ url_for('hello') }}">
+                LensCap
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="Navbar">
+            <ul class="nav navbar-nav navbar-right mt-3 ml-auto mr-5">
+                <li  class="nav-item active px-2"><a style="color: #2a71ff;" class="nav-link nav-style nav-size"
+                        href="{{ url_for('main') }}"> Home
+                    </a>
+                </li>
+                <li  class="nav-item px-2"><a style="color:#2a71ff;" class="nav-link nav-style nav-size" href="{{ url_for('about') }}">
+                        About</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<!-- Use bootstrap container and row components -->
+<div class="container main">
+<div class="row align-items-center justify-content-center">
+<div class="col-md-8 content">
+    <br>
+    <br>
+    <br>
+    <br>
+
+<h1 style="margin-top: 30px;">About Us</h1>
+<p>We are a team of Students who are passionate about using artificial intelligence. Our website allows you to upload an image of your eye and get a diagnosis of cataract, a common eye condition that causes blurred vision and can lead to blindness if left untreated.</p>
+<p style="margin-bottom: 15vh;">Our website uses a deep learning model that we trained on thousands of images of eyes with and without cataract. The model can detect cataract with high accuracy and speed. We hope that our website can help people who have limited access to eye care or who want to check their eye health regularly.</p>
+<br>
+<br>
+
+<h3 style="margin-bottom: 15vh;">Our Team:</h3>
+<div class="container text-center">
+  <div class="row">
+    <div class="col" style="margin-right: 5vh;"> <b>Apurba </b>
+      <br>
+      <b>Lahiri</b>
+      <br>
+      <br>
+      Model Implementation & Training<b>(Leader)</b></div>
+    <div class="col" style="margin-right: 5vh;"> <b>Satyapriya Biswas </b>
+      <br>
+      <br>
+      Model Implementation & Training</div>
+    <div class="col" style="margin-right: 5vh;"> <b>Srijan Mitra </b>
+      <br>
+      <br>
+      Full Stack</div>
+    <div class="col" style="margin-right: 5vh;"> <b>Rajarshi Biswas </b>
+      <br>
+      <br>
+      Backend</div>
+  </div>
+</div>
+</div>
+</div>
+<!-- Add bootstrap CDN scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
