@@ -19,7 +19,7 @@ from keras.models import load_model
 app = Flask(__name__)
 app.debug = True
 
-
+#hello its me
 log_pickle_model = pickle.load(open("log_model.sav", 'rb'))
 sift = cv2.xfeatures2d.SIFT_create()
 
